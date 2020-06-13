@@ -1,0 +1,21 @@
+<h1> Employee List </h1>
+<hr>
+
+<input type="text" name="search" [(ngModel)]="search" placeholder="......">
+
+<ul *ngFor="let employee of employees">
+	<li *ngIf="employee.status" 
+  (click)="renderEmployeeCard(employee)"
+  (mouseenter)="onMouseEnter(employee)"
+  (mouseleave)="onMouseLeave(employee)">{{employee.fullname}}
+		<span class="ms">{{employee.position}}</span>
+	</li>
+</ul>
+<br>
+{{search}}
+<hr>
+<pre>
+      <code>
+        {{currentEmployee | json}}
+      </code>
+    </pre>

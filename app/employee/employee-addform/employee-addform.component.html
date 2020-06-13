@@ -1,0 +1,25 @@
+<div class="container">
+<form [formGroup]="myForm" (ngSubmit)="postEmployee()">
+  <div class="form-group">
+    <label for="fullname">Fullname</label>
+    <input type="text" 
+            class="form-control" 
+            formControlName="fullname" 
+            placeholder="Type here... "> 
+  </div>
+  <div class="form-group">
+    <label for="gender">Gender</label>
+    <input type="text" class="form-control" formControlName="gender"  placeholder="Type here...">
+  </div>
+  <div class="form-group">
+    <label for="post">Post</label>
+    <input type="text" class="form-control" formControlName="post"  placeholder="Type here...">
+  </div>
+  <div class="form-group">
+    <label for="departement">Departement</label>
+    <input type="text" class="form-control" formControlName="departement"  placeholder="Type here...">
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>

@@ -1,0 +1,24 @@
+<h4> Employees </h4>
+
+<app-addform (onAddEmployee)="reload()"></app-addform>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Full Name</th>
+      <th scope="col">Gender</th>
+      <th scope="col">Post</th>
+      <th scope="col">Departement</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let emp of employees;let i=index">
+      <th scope="row">{{emp.id}}</th>
+      <td>{{emp.fullname}}</td>
+      <td>{{emp.gender}}</td>
+      <td>{{emp.post}}</td>
+      <td>{{emp.departement}}</td>
+    </tr>
+  </tbody>
+</table>
