@@ -7,7 +7,7 @@ import {EmployeeService} from '../employee.service'
   styleUrls:['./employee-addform.component.css']
 })
 export class EmployeeAddFormComponent{
-  @Output() onAddEmployee:EventEmitter<any>=new EventEmitter()
+  @Output() onAddEmployee=new EventEmitter()
   myForm=this.fb.group(
     {
       fullname:[''],
@@ -21,7 +21,7 @@ export class EmployeeAddFormComponent{
   }
 
   postEmployee(){
-    this.employeeService.postEmployee(this.myForm.value).subscribe( this.onAddEmployee.next('alo'));
+    this.employeeService.postEmployee(this.myForm.value).subscribe( value=>this.onAddEmployee.emit(''));
    
   }
 }
