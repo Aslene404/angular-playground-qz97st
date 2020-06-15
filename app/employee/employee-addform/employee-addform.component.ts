@@ -21,7 +21,10 @@ export class EmployeeAddFormComponent{
   }
 
   postEmployee(){
-    this.employeeService.postEmployee(this.myForm.value).subscribe( value=>this.onAddEmployee.emit(''));
+    this.employeeService.postEmployee(this.myForm.value).subscribe( value=>{
+      this.onAddEmployee.emit('');
+      this.myForm.reset();
    
+  });
   }
 }
